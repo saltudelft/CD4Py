@@ -10,6 +10,7 @@ significantly affects the practicality of machine learning-based tools, especial
 - [Usage](#usage)
   - [Examples](#examples)
 - [Approach](#approach)
+- [TODOs](#todos)
 
 # Quick Installation
 ```
@@ -64,3 +65,9 @@ The `CD4Py` code de-duplication tool uses the following procedure to identify du
 4. Perform `k`-nearest neighbor search to find `k` candidate duplicate files for each source code file. 
 Next, filter out candidate duplicate files by considering the threshold `t`.
 5. Find clusters of duplicate source code files while assuming that similarity is transitive.
+
+# TODOs
+To implement the following TODOs, external collaborations are very welcome.
+
+- Better logging for showing infos and errors using Python's `logging` module.
+- Unit tests for testing the tool's functionalities. `pytest` can be used.
