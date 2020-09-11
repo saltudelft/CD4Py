@@ -1,5 +1,6 @@
 # License: GNU General Public License v3.0
 
+__version__ = "0.1.0"
 
 def log_step(step_msg: str):
     no_astrisks = 50

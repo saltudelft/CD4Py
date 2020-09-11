@@ -172,7 +172,7 @@ def report_duplicate_files_stats(no_src_files: int, no_duplicate_files: int,
                                  duplicate_files_set_closure: List[Set[str]]):
 
     print("Number of duplicated files: %.2f%%" % (no_duplicate_files / no_src_files * 100.0))
-    print("Number of clusters: ", len(duplicate_files_set_closure))
+    print(f"Number of clusters: {len(duplicate_files_set_closure):,}")
     print("Avg. number of files per clones %.2f" % np.mean([len(c) for c in duplicate_files_set_closure]))
     print("Median number of files per clones %.2f" % np.median([len(c) for c in duplicate_files_set_closure]))
     print("Duplication ratio %.2f%%" % (
@@ -221,4 +221,4 @@ def deduplicate_py_data(py_projects_path: str, tokenized_files_path: str, detect
     report_duplicate_files_stats(df_tokenized_files.shape[0], len(duplicate_files), duplicate_files_set_closure)
     save_jsonl_gz([list(c) for c in duplicate_files_set_closure], detected_duplicate_f_path)
 
-    print("Finished duplicate files detection in %.2f sec." % ((time.time() - start_t) / 60.0))
+    print("Finished duplicate files detection in %.2f minutes." % ((time.time() - start_t) / 60.0))
