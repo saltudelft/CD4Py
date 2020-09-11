@@ -4,6 +4,10 @@ It detects **near** and **exact** duplicate source code files. To train a machin
 it is essential to identify and remove duplicate source code files from the dataset. Otherwise, code duplication 
 significantly affects the practicality of machine learning-based tools, especially on unseen data.
 
+- [Quick Installation](#quick-installation)
+- [Usage](#usage)
+  - [Examples](#examples)
+- [Approach](#approach)
 
 # Quick Installation
 ```

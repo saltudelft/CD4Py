@@ -171,11 +171,11 @@ def find_transitive_duplicate_sets(duplicate_files_set: Dict[str, List[Tuple[str
 def report_duplicate_files_stats(no_src_files: int, no_duplicate_files: int,
                                  duplicate_files_set_closure: List[Set[str]]):
 
-    print("Number of duplicated files: %.2f%%" % (no_duplicate_files / no_src_files * 100.0))
-    print(f"Number of clusters: {len(duplicate_files_set_closure):,}")
-    print("Avg. number of files per clones %.2f" % np.mean([len(c) for c in duplicate_files_set_closure]))
-    print("Median number of files per clones %.2f" % np.median([len(c) for c in duplicate_files_set_closure]))
-    print("Duplication ratio %.2f%%" % (
+    print(f"Number of duplicated files: {no_duplicate_files:,} ({no_duplicate_files / no_src_files * 100.0:.2f}%)")
+    print(f"Number of detected clusters: {len(duplicate_files_set_closure):,}")
+    print("Avg. number of files per clones: %.2f" % np.mean([len(c) for c in duplicate_files_set_closure]))
+    print("Median number of files per clones: %.2f" % np.median([len(c) for c in duplicate_files_set_closure]))
+    print("Duplication ratio: %.2f%%" % (
                 (no_duplicate_files - len(duplicate_files_set_closure)) / no_src_files * 100.0))
 
 
