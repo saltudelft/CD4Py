@@ -1,4 +1,6 @@
 # Intro
+[![PyPI version](https://badge.fury.io/py/cd4py.svg)](https://badge.fury.io/py/cd4py)
+
 **CD4Py** is a code de-duplication tool for Python programming language. 
 It detects **near** and **exact** duplicate source code files. To train a machine learning model on source code files, 
 it is essential to identify and remove duplicate source code files from the dataset. Otherwise, code duplication 
