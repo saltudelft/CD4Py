@@ -14,8 +14,7 @@ significantly affects the practicality of machine learning-based tools, especial
 
 # Quick Installation
 ```
-$ git clone https://github.com/saltudelft/CD4Py.git & cd CD4Py
-$ pip install .
+$ pip install cd4py
 ```
 
 # Usage
