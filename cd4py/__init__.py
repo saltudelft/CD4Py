@@ -12,3 +12,7 @@ def log_step(step_msg: str):
         r = l + 1
 
     print("*" * (no_astrisks - l) + step_msg + "*" * (no_astrisks - r))
+
+
+def dummy_preprocessor(doc):
+    return doc

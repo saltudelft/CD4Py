@@ -20,7 +20,7 @@ def main():
 
     args = arg_parser.parse_args()
 
-    deduplicate_py_data(args.p, args.ot)
+    deduplicate_py_data(args.p, args.ot, args.d)
 
 
 if __name__ == '__main__':
