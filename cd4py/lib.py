@@ -182,13 +182,21 @@ def report_duplicate_files_stats(no_src_files: int, no_duplicate_files: int,
 def deduplicate_py_data(py_projects_path: str, tokenized_files_path: str, detected_duplicate_f_path: str,
                         dim_tfidf_vec: int, t: int, no_knn: int, knn_tree_size: int):
     """
-    Identifies near or exact duplicate files in a Python corpus
+    Identifies near or exact duplicate files in a Python corpus.
+
+    :param py_projects_path: Path to the Python project files
+    :param tokenized_files_path: Path to store tokenized files
+    :param detected_duplicate_f_path: Path to store detected duplicate files
+    :param dim_tfidf_vec: Dimension of vectorized files
+    :param t: Threshold to identify a file as duplicate
+    :param no_knn: Number of nearest neighbors to find when performing KNN search
+    :param knn_tree_size: Size of trees when building KNN index. Higher number gives more precision but slower.
     """
 
     start_t = time.time()
 
     log_step("Tokenizing Python source code files")
-    #tokenize_all_project_folders(py_projects_path, tokenized_files_path)
+    tokenize_all_project_folders(py_projects_path, tokenized_files_path)
 
     log_step("Loading all the tokenized Python source code files")
     all_tokenized_py_files = get_tokenized_py_files(tokenized_files_path)

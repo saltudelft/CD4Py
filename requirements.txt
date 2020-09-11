@@ -2,3 +2,6 @@ dpu-utils
 tqdm
 joblib
 pandas
+scikit-learn
+numpy
+annoy
