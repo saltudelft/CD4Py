@@ -1,1 +1,4 @@
 dpu-utils
+tqdm
+joblib
+pandas

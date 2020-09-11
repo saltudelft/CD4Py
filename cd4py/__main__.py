@@ -1,11 +1,13 @@
 # License: GNU General Public License v3.0
 
 from argparse import ArgumentParser
+from cd4py.lib import deduplicate_py_data
 
 
 def main():
 
     arg_parser = ArgumentParser(description="Code De-Duplication for Python")
+    arg_parser.add_argument("--p", required=True, type=str, help="Path to Python projects")
     arg_parser.add_argument("--od", required=True, type=str, help="Output folder to store detected duplicate files.")
     arg_parser.add_argument("--ot", required=True, type=str, help="Output folder to store tokenized files.")
     arg_parser.add_argument("--d", default=2048, type=int, help="Dimension of TF-IDF vectors [default: 2048].")
@@ -18,7 +20,7 @@ def main():
 
     args = arg_parser.parse_args()
 
-    print(args)
+    deduplicate_py_data(args.p, args.ot)
 
 
 if __name__ == '__main__':
