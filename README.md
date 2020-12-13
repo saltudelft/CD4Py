@@ -70,3 +70,4 @@ To implement the following TODOs, external collaborations are very welcome.
 
 - Better logging for showing infos and errors using Python's `logging` module.
 - Unit tests for testing the tool's functionalities. `pytest` can be used.
+- Batch by files instead of directories in tokenization (to equalize workload for parallel tasks)
